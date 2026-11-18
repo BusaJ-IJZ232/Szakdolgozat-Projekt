@@ -1,0 +1,8 @@
+bor 1: https://www.bortarsasag.hu/hu/bor/magyar/balatonboglar/ikon-cabernet-sauvignon-2022-23200
+bor 2: https://www.bortarsasag.hu/hu/bor/magyar/villany/ruppert-merlot-premium-2024
+
+bor 4: https://www.bortarsasag.hu/hu/bor/argentina/mendoza/terrazas-malbec-2023
+bor 5: https://www.bortarsasag.hu/hu/bor/magyar/balatonboglar/legli-gesztenyes-rajnai-rizling-2019
+bor 6: https://www.bortarsasag.hu/hu/bor/magyar/tokaj-hegyalja/grof-degenfeld-6-puttonyos-aszu-2017
+bor 7: https://www.bortarsasag.hu/hu/bor/uj-zeland/marlborough/cloudy-bay-pinot-noir-2023
+bor 8: https://www.bortarsasag.hu/hu/bor/franciaorszag/bordeaux/chateau-dyquem-sauternes-2022

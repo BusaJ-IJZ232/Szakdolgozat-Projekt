@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="header-footer-style.css">
+        <link rel="stylesheet" href="index-style.css">
+        <link rel="stylesheet" href="kosar.css">
+        <script src="kosar.js"></script>
+        <title>Kosár | Busa Borászat</title>
+    </head>
+    <body>
+      <header class="header">
+        <a href="index.html" class="brand-container">
+            <img src="Kepek/logo_transparent_background.png" alt="Busa Pincészet Logó" class="brand-logo">
+            <span class="brand-name">Busa Pincészet és Borászat</span>
+        </a>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
+                <li><a href="boraink.html">Boraink</a></li>
+                <li><a href="kapcsolatok.html">Kapcsolatok</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-cart">
+            <a href="#" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Kosár (0)</span>
+            </a>
+        </div>
+    </header>
+
+
+
+    <main class="cart-page-section">
+        <div class="cart-container">
+            
+            <div class="empty-cart-message" id="emptyCartMsg" style="display: none;">
+                <h2>Az Ön kosara jelenleg üres</h2>
+                <p>Nézzen körül prémium borkínálatunkban, és válassza ki kedvenc tételeit!</p>
+                <a href="boraink.html" class="btn-continue-shopping">Vissza a borokhoz</a>
+            </div>
+
+            <div class="cart-card" id="cartContentCard">
+                
+                <div class="cart-table-wrapper">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th class="col-product">TERMÉK</th>
+                                <th class="col-quantity">MENNYISÉG</th>
+                                <th class="col-price">EGYSÉGÁR</th>
+                                <th class="col-total">ÖSSZEG</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody id="cartTableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-footer-grid">
+
+                    <div class="cart-actions-left">
+                        <div class="row-top-buttons">
+                            <button type="button" class="btn-cart-clear" id="btnClearCart">
+                                <i class="fa-solid fa-xmark"></i> Kosár ürítése
+                            </button>
+                        </div>
+                        <a href="boraink.html" class="btn-cart-continue">
+                            <i class="fa-solid fa-chevron-left"></i> Vásárlás folytatása
+                        </a>
+                    </div>
+
+                    <div class="cart-summary-box">
+                        <div class="summary-row">
+                            <span class="label">Részösszeg:</span>
+                            <span class="value" id="cartSubtotal">0 Ft</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="label">Szállítás:</span>
+                            <span class="value free-shipping">Ingyenes</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row total-row">
+                            <span class="total-label">Végösszeg:</span>
+                            <span class="total-value" id="cartGrandTotal">0 Ft</span>
+                        </div>
+                        <button type="button" class="btn-checkout-primary" id="btnCheckout">
+                            <i class="fa-solid fa-bag-shopping"></i> Pénztár
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <footer class="site-footer">
+            
+            <div class="footer-top">
+                <div class="footer-container">
+                    
+                    <div class="footer-col brand-col">
+                        <div class="footer-brand">
+                            <img src="Kepek/logo_transparent_background.png" alt="Busa Pincészet Logó" class="footer-logo">
+                            <span class="footer-brand-name">Busa Pincészet és Borászat</span>
+                        </div>
+                        <p class="footer-about">
+                            Családi pincészetünk a hagyományokat követve, modern szemlélettel készíti borait generációk óta.
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-heading">GYORS HIVATKOZÁSOK</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Főoldal</a></li>
+                            <li><a href="rolunk.html">Rólunk</a></li>
+                            <li><a href="boraink.html">Boraink</a></li>
+                            <li><a href="kapcsolatok.html">Kapcsolat</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-heading">ELÉRHETŐSÉGEINK</h4>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>1234 Szőlőhegy, Pincészet utca 1.<br>Magyarország</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+36 70 123 4567</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>info@busapince.hu</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-container">
+                    <p>© 2026 Busa Pincészet és Borászat. Minden jog fenntartva.</p>
+                </div>
+            </div>
+
+            <a href="#" class="back-to-top" title="Ugrás a tetejére">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
+        </footer>
+    </body>
+</html>

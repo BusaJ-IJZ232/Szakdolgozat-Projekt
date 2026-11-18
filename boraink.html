@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="header-footer-style.css">
+        <link rel="stylesheet" href="boraink-style.css">
+        <script src="kosarba.js"></script>
+        <script src="szures.js"></script>
+        <title>Boraink | Busa Borászat</title>
+    </head>
+    <body>
+      <header class="header">
+        <a href="index.html" class="brand-container">
+            <img src="Kepek/logo_transparent_background.png" alt="Busa Pincészet Logó" class="brand-logo">
+            <span class="brand-name">Busa Pincészet és Borászat</span>
+        </a>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
+                <li><a href="boraink.html" class="active">Boraink</a></li>
+                <li><a href="kapcsolatok.html">Kapcsolatok</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-cart">
+            <a href="kosar.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Kosár (0)</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="wines-hero-section">
+        <div class="wines-hero-overlay"></div>
+        <div class="wines-hero-container">
+            <div class="wines-hero-content">
+                <span class="wines-hero-sub">BORAINK</span>
+                <h1 class="wines-hero-title">Különleges borok, egyedi alkalmakhoz</h1>
+                <p class="wines-hero-description">
+                    Fedezze fel borászatunk válogatott tételeit, melyek a hagyományt 
+                    és a modern szemléletet ötvözik, hogy minden kortyban 
+                    a természet ízeit érezhesse.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <form class="filter-form" id="wineFilterForm" action="szures.php" method="GET">
+                
+                <div class="filter-group">
+                    <label for="filter-vintage"><i class="fa-regular fa-calendar"></i> Évjárat</label>
+                    <input type="number" id="filter-vintage" name="vintage" placeholder="Pl. 2022" min="1990" max="2026">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-type"><i class="fa-solid fa-wine-glass"></i> Fajta</label>
+                    <div class="select-wrapper">
+                        <select id="filter-type" name="type">
+                            <option value="" selected disabled>Válasszon fajtát</option>
+                            <option value="all">Összes</option>
+                            <option value="red">Vörösbor</option>
+                            <option value="white">Fehérbor</option>
+                            <option value="rose">Rosé</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-arrow"></i>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-price"><i class="fa-solid fa-coins"></i> Maximális ár</label>
+                    <div class="input-with-suffix">
+                        <input type="number" id="filter-price" name="price" placeholder="Pl. 5 000" min="0" step="100">
+                        <span class="suffix">Ft</span>
+                    </div>
+                </div>
+
+                <div class="filter-action">
+                    <button type="submit" class="btn-filter-search">
+                        <i class="fa-solid fa-magnifying-glass"></i> Keresés
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <main class="catalog-section">
+        <div class="catalog-meta-bar">
+            <div class="results-count">
+                Találatok száma: <strong id="resultsCount">8</strong>
+            </div>
+            <div class="sort">
+                <label for="sort-select">Rendezés:</label>
+                <select id="sort-select" name="sort">
+                    <option value="default" selected>Rendezés...</option>
+                    <option value="price-asc">Ár szerint növekvő</option>
+                    <option value="price-desc">Ár szerint csökkenő</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge red">Vörösbor</span>
+                    <img src="Kepek/Bor Kepek/ikon_cabernet_sauvignon_2022_png_08ab3608.webp" class="bottle-img" alt="Cabernet Sauvignon">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">Cabernet Sauvignon</h2> 
+                    <span class="wine-vintage">2022</span>
+                    <div class="wine-price">3 250 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="Cabernet_Sauvignon.html" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge red">Vörösbor</span>
+                    <img src="Kepek/Bor Kepek/ruppert_merlot_2024_png_7205a8b6.webp" class="bottle-img" alt="Merlot Premium">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">Merlot Premium</h2>
+                    <span class="wine-vintage">2024</span>
+                    <div class="wine-price">6 700 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="Merlot_Premium.html" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge rose">Rosé</span>
+                    <img src="Kepek/Bor Kepek/gere_rose_2025_png_e1433602.webp" class="bottle-img" alt="Rosé Cuvée">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">Rosé Cuvée</h2>
+                    <span class="wine-vintage">2025</span>
+                    <div class="wine-price">2 500 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="#" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge red">Vörösbor</span>
+                    <img src="Kepek/Bor Kepek/terrazas_malbec_2023_png_4109458c.webp" class="bottle-img" alt="Malbec">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">Malbec</h2>
+                    <span class="wine-vintage">2023</span>
+                    <div class="wine-price">8 700 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="#" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge white">Fehérbor</span>
+                    <img src="Kepek/Bor Kepek/legli_gesztenyes_riesling_2019_png_a9cda910.webp" class="bottle-img" alt="Gesztenyés Riesling">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">Gesztenyés Riesling</h2>
+                    <span class="wine-vintage">2019</span>
+                    <div class="wine-price">7 800 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="#" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge white">Fehérbor</span>
+                    <img src="Kepek/Bor Kepek/grof_degenfeld_6_puttonyos_aszu_2017_tokaj_png_3ac65fa2.webp" class="bottle-img" alt="6 Puttonyos Aszú">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">6 Puttonyos Aszú</h2>
+                    <span class="wine-vintage">2017</span>
+                    <div class="wine-price">23 500 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="#" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge red">Vörösbor</span>
+                    <img src="Kepek/Bor Kepek/cloudy_bay_pinot_noir_2023_png_27a0df7a.webp" class="bottle-img" alt="Pinot Noir">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">Pinot Noir</h2>
+                    <span class="wine-vintage">2023</span>
+                    <div class="wine-price">20 100 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="#" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="wine-card">
+                <div class="wine-card-media">
+                    <span class="wine-badge white">Fehérbor</span>
+                    <img src="Kepek/Bor Kepek/chateau_d_yquem_2022_png_bc786d1a.webp" class="bottle-img" alt="Sauternes">
+                </div>
+                <div class="wine-card-body">
+                    <h2 class="wine-title">Sauternes</h2>
+                    <span class="wine-vintage">2022</span>
+                    <div class="wine-price">175 000 Ft</div>
+                    <div class="wine-card-actions">
+                        <a href="#" class="btn-wine-details">Részletek</a>
+                        <button type="button" class="btn-wine-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div class="cart-window-overlay" id="cartwindow">
+        <div class="cart-window-card">
+            <button class="window-close-btn" id="windowCloseBtn" aria-label="Bezárás">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="window-image">
+                <img src="" alt="Borosüveg" class="window-bottle-img" id="windowWineImg">
+            </div>
+            <div class="window-content-body">
+                <div class="window-vintage-line" id="windowWineVintage"></div>
+                <h2 class="window-wine-title" id="windowWineTitle"></h2>
+                <div class="window-price-wrapper">
+                    <span class="window-wine-price" id="windowWinePrice"></span>
+                    <span class="window-price-unit">/ palack</span>
+                </div>
+                <div class="window-quantity-picker">
+                    <button class="quantity-btn" id="quantityMinus"><i class="fa-solid fa-minus"></i></button>
+                    <input type="number" class="quantity-input" id="quantityInput" value="1" min="1" readonly>
+                    <button class="quantity-btn" id="quantityPlus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <button type="button" class="btn-window-add-cart" id="btnConfirmAddToCart">
+                    <i class="fa-solid fa-cart-shopping"></i> Kosárba
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">      
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-col brand-col">
+                    <div class="footer-brand">
+                        <img src="Kepek/logo_transparent_background.png" alt="Busa Pincészet Logó" class="footer-logo">
+                        <span class="footer-brand-name">Busa Pincészet és Borászat</span>
+                    </div>
+                    <p class="footer-about">
+                        Családi pincészetünk a hagyományokat követve, modern szemlélettel készíti borait generációk óta.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">GYORS HIVATKOZÁSOK</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="rolunk.html">Rólunk</a></li>
+                        <li><a href="boraink.html">Boraink</a></li>
+                        <li><a href="kapcsolatok.html">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">ELÉRHETŐSÉGEINK</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i><span>1234 Szőlőhegy, Pincészet utca 1.<br>Magyarország</span></li>
+                        <li><i class="fa-solid fa-phone"></i><span>+36 70 123 4567</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>info@busapince.hu</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>© 2026 Busa Pincészet és Borászat. Minden jog fenntartva.</p>
+            </div>
+        </div>
+        <a href="#" class="back-to-top" title="Ugrás a tetejére"><i class="fa-solid fa-chevron-up"></i></a>
+    </footer>
+</html>
