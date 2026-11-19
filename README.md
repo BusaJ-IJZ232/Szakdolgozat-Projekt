@@ -53,6 +53,7 @@ Kattintson az Apache sorában lévő **Config** gombra	>>	legördülő menü: ny
 Mentés
 
 
+Végül a böngészőbe másoljuk be: http://localhost/phpmyadmin/ és a felületen az SQL fül alatt futtassuk a borok.sql állományt.
 
 
 
